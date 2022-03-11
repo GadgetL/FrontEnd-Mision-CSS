@@ -6,17 +6,19 @@ body {
 
 header {
     background-color: #36a4c5;
+    z-index: 1;
 }
 
 .wrap-menu-header {
-    position: relative;
+    position: fixed;
     display: flex;
     width: 100%;
-    height: 10em;
+    height: 8em;
+    background-color: #53b4d1;
 }
 
 .nav-menu {
-    position: relative;
+    position: absolute;
     display: flex;
     width: 100%;
     height: -webkit-fill-available;
@@ -24,12 +26,12 @@ header {
 
 .logo-menu {
     width: 20em;
-    height: 10em;
+    height: 8em;
 }
 
 .logo-menu a img {
-    width: 10em;
-    height: 10em;
+    width: 8em;
+    height: 8em;
 }
 
 .nav-menu ul {
@@ -83,22 +85,24 @@ header {
 }
 
 .nav-adorno {
-    background-color: #72dbee;
-    height: 10em;
-    width: 10em;
+    height: 0;
+    width: 0;
     position: absolute;
     display: flex;
-    top: 5em;
-    left: 10em;
-    transform: rotate( 45deg);
-    z-index: -1;
+    top: 8em;
+    left: 8em;
+    border-top: 100px solid #4eb5f0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
 }
 
 .content-body {
     display: flex;
     position: relative;
-    height: 35em;
+    height: 40em;
     width: 100%;
+    top: 8em;
+    z-index: -1;
 }
 
 .content-body-txt {
@@ -112,7 +116,7 @@ header {
 }
 
 .content-body-img img {
-    height: 35em;
+    height: 40em;
     width: 100%;
 }
 
@@ -127,9 +131,9 @@ header {
     position: relative;
     align-items: center;
     justify-items: center;
-    margin: 0% auto;
-    width: 70%;
-    height: 65%;
+    margin: 1% auto;
+    width: 75%;
+    height: 55%;
 }
 
 .body-txt-p div a {
@@ -138,10 +142,17 @@ header {
     font-family: system-ui;
 }
 
+.body-txt-p p {
+    width: 75%;
+    height: auto;
+    margin: 1% auto;
+}
+
 .txt-icons-principal {
-    display: flex;
+    display: contents;
     position: relative;
     justify-content: center;
+    align-content: space-between;
 }
 
 .txt-icons-principal ul {
@@ -172,4 +183,33 @@ header {
     align-self: center;
     height: 2em;
     width: 2em;
+}
+
+.txt-icon-agenda {
+    display: flex;
+    width: 100%;
+    height: 3em;
+    justify-content: flex-start;
+    margin: 0%;
+    padding-left: 6em;
+}
+
+.txt-icon-agenda img {
+    align-self: center;
+    height: 2em;
+    width: 2em;
+    position: relative;
+    display: flex;
+}
+
+.txt-icon-agenda a {
+    align-self: center;
+}
+
+.bar-content-body {
+    height: 4em;
+    width: 100%;
+    position: absolute;
+    top: 44em;
+    background-color: #b8cefd;
 }
